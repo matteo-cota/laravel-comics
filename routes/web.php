@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 // Comics List Page
-Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+Route::get('/comics', [ComicController::class, 'index']);
 
 Route::view('/about', 'pages.about')->name('about');
 Route::view('/contact', 'pages.contact')->name('contact');

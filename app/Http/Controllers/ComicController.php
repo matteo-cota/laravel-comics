@@ -8,10 +8,10 @@ class ComicController extends Controller
 {
     public function index()
     {
-        // Retrieve the comics from the config file
+        // Recupera i dati dal file di configurazione
         $comics = config('comics');
 
-        // Pass the comics to the view
+        // Passa i dati alla vista
         return view('comics.index', compact('comics'));
     }
 }
