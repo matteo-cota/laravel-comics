@@ -1,5 +1,5 @@
 <footer>
-    <h2>
-        Footer
-    </h2>
+    <div class="container">
+        <p>&copy; {{ date('Y') }} DC Comics. All rights reserved.</p>
+    </div>
 </footer>

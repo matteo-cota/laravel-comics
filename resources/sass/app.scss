@@ -1,0 +1,50 @@
+// Import Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Your custom styles
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #2e2e2e;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.comics-list {
+    padding: 2rem;
+    h1 {
+        text-align: center;
+    }
+}
+
+.comics-grid {
+    @include media-breakpoint-up(md) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+.comic-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+}
