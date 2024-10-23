@@ -8,10 +8,20 @@ class ComicController extends Controller
 {
     public function index()
     {
-        // Recupera i dati dal file di configurazione
+        $comics = config('comics');
+        return view('comics.index', compact('comics'));
+    }
+
+    public function show($id)
+    {
         $comics = config('comics');
 
-        // Passa i dati alla vista
-        return view('comics.index', compact('comics'));
+        // Controlla se l'ID esiste
+        if (!isset($comics[$id])) {
+            abort(404);  // Se l'ID non esiste, restituisci un errore 404
+        }
+
+        $comic = $comics[$id];
+        return view('comics.show', compact('comic'));
     }
 }

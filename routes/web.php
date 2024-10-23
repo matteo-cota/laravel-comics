@@ -14,13 +14,12 @@ use App\Http\Controllers\ComicController;
 |
 */
 
-// Homepage
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
-// Comics List Page
-Route::get('/comics', [ComicController::class, 'index']);
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
-Route::view('/about', 'pages.about')->name('about');
-Route::view('/contact', 'pages.contact')->name('contact');
+Route::view('/about', 'about')->name('about');
+Route::view('/contact', 'contact')->name('contact');
+Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');
