@@ -1,7 +1,7 @@
 <header class="bg-primary py-3">
     <div class="container d-flex justify-content-between align-items-center">
         <a href="/" class="navbar-brand text-white">
-            <img src="/public/images/dc-logo.png" alt="Logo" width="50">
+            <img src="images/dc-logo.png" alt="Logo" width="50">
         </a>
         <nav>
             <ul class="nav">
@@ -41,4 +41,5 @@
             </ul>
         </nav>
     </div>
+    <img src="images/jumbotron.jpg" alt="jumbotron">
 </header>
